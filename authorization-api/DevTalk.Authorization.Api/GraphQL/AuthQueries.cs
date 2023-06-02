@@ -42,7 +42,7 @@ public partial class AppQueries : FederatedQuery
             {
                 return new MyCustomTypeDTO() { Id = 123, DateCreated = DateTime.Now };
             }
-        ).AuthorizeWith("AuthenticatedUserPolicy");
+        ).AuthorizeWith("VisitorPolicy");
         
         Field<StringGraphType>(
             "authorization_getDataAsAdmin",
